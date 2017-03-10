@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.cooltechworks.creditcarddesign.CreditCardView
+        android:id="@+id/card_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:card_number="38056789000000000"
+        app:card_holder_name="HARISH SRIDHARAN"
+        app:cvv="522"
+        app:card_expiration="01/17"
+        />
+
+    <com.alihafizji.library.CreditCardEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textNoSuggestions"
+        android:hint="@string/enter_card_number" />
+
+    <com.devmarvel.creditcardentry.library.CreditCardForm
+        android:id="@+id/form_with_zip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        app:include_helper="false"
+        app:include_zip="true"/>
+
+    <com.vinaygaba.creditcardview.CreditCardView
+        android:id="@+id/card1"
+        android:layout_width="wrap_content"
+        android:layout_height="225dp"
+        android:background="@drawable/cardbackground_world"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="16dp"
+        app:cardNumber="5500005555555559"
+        app:cardName="Vinay Gaba"
+        app:cardNumberTextColor="#cccccc"
+        app:cardNumberFormat="masked_all_but_last_four"
+        app:cardNameTextColor="#cccccc"
+        app:type="auto"
+        app:putChip="true"
+        app:expiryDate = "02/22"
+        app:expiryDateTextColor="#cccccc"
+        app:isEditable="true"
+        app:validTillTextColor="#cccccc"
+        app:hintTextColor = "#cccccc"
+        />
+
+
+
+</LinearLayout>

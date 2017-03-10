@@ -20,6 +20,13 @@
         <activity
             android:name="com.github.mzule.fantasyslide.app.UniversalActivity"
             android:theme="@style/UniversalTheme" />
+        <activity android:name=".CreditCardActivity"></activity>
+
+        <activity android:name="com.cooltechworks.creditcarddesign.CardEditActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".CreditCardViewActivity"></activity>
+        <activity android:name=".CreditCardFormViewActivity"></activity>
     </application>
 
 </manifest>

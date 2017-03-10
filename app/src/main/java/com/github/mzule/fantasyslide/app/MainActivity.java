@@ -1,6 +1,7 @@
 package com.github.mzule.fantasyslide.app;
 
 import android.animation.ObjectAnimator;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -14,12 +15,18 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.cooltechworks.creditcarddesign.CardEditActivity;
+import com.cooltechworks.creditcarddesign.CreditCardUtils;
 import com.github.mzule.fantasyslide.SideBar;
 import com.github.mzule.fantasyslide.SimpleFantasyListener;
 import com.github.mzule.fantasyslide.Transformer;
 
+
 public class MainActivity extends AppCompatActivity {
     private DrawerLayout drawerLayout;
+
+    final int GET_NEW_CARD = 2;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -127,10 +134,43 @@ public class MainActivity extends AppCompatActivity {
             if (title.startsWith("星期")) {
                 Toast.makeText(this, title, Toast.LENGTH_SHORT).show();
             } else {
-                startActivity(UniversalActivity.newIntent(this, title));
+                Toast.makeText(this, title, Toast.LENGTH_SHORT).show();
+                switch (title) {
+                    case "扫一扫":
+                        startActivity(new Intent(this, CreditCardActivity.class));
+                        break;
+                    case "查看":
+                        startActivity(new Intent(this, CreditCardViewActivity.class));
+                        break;
+                    case "表单":
+                        startActivity(new Intent(this, CreditCardFormViewActivity.class));
+                        break;
+                    case "信用卡":
+                        Intent intent = new Intent(MainActivity.this, CardEditActivity.class);
+                        startActivityForResult(intent,GET_NEW_CARD);
+                        break;
+                    default:
+                        startActivity(UniversalActivity.newIntent(this, title));
+                }
+
             }
         } else if (view.getId() == R.id.userInfo) {
             startActivity(UniversalActivity.newIntent(this, "个人中心"));
         }
     }
+
+    public void onActivityResult(int reqCode, int resultCode, Intent data) {
+
+        if(resultCode == RESULT_OK) {
+
+            String cardHolderName = data.getStringExtra(CreditCardUtils.EXTRA_CARD_HOLDER_NAME);
+            String cardNumber = data.getStringExtra(CreditCardUtils.EXTRA_CARD_NUMBER);
+            String expiry = data.getStringExtra(CreditCardUtils.EXTRA_CARD_EXPIRY);
+            String cvv = data.getStringExtra(CreditCardUtils.EXTRA_CARD_CVV);
+
+            // Your processing goes here.
+
+        }
+    }
+
 }

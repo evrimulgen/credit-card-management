@@ -56,12 +56,22 @@
             <TextView
                 style="@style/MenuText"
                 android:drawableLeft="@drawable/wallet"
-                android:text="钱包" />
+                android:text="扫一扫" />
+
+            <TextView
+                style="@style/MenuText"
+                android:drawableLeft="@drawable/wallet"
+                android:text="查看" />
+
+            <TextView
+                style="@style/MenuText"
+                android:drawableLeft="@drawable/wallet"
+                android:text="表单" />
 
             <TextView
                 style="@style/MenuText"
                 android:drawableLeft="@drawable/coupon"
-                android:text="优惠券" />
+                android:text="信用卡" />
 
             <TextView
                 style="@style/MenuText"
