@@ -27,6 +27,10 @@
             />
         <activity android:name=".CreditCardViewActivity"></activity>
         <activity android:name=".CreditCardFormViewActivity"></activity>
+        <activity android:name=".CalendarActivity"></activity>
+        <activity android:name="com.github.mzule.fantasyslide.calendar.MaterialCalendarBasicActivity"></activity>
+        <activity android:name="com.github.mzule.fantasyslide.calendar.BasicActivityDecorated"></activity>
+        <activity android:name="com.github.mzule.fantasyslide.filepicker.MainActivity"></activity>
     </application>
 
 </manifest>

@@ -50,8 +50,9 @@
 
             <TextView
                 style="@style/MenuText"
-                android:drawableLeft="@drawable/circle"
-                android:text="朋友圈" />
+                android:drawableLeft="@drawable/settings"
+                android:text="日历" />
+
 
             <TextView
                 style="@style/MenuText"
@@ -78,10 +79,7 @@
                 android:drawableLeft="@drawable/friends"
                 android:text="好友" />
 
-            <TextView
-                style="@style/MenuText"
-                android:drawableLeft="@drawable/settings"
-                android:text="设置" />
+
         </com.github.mzule.fantasyslide.SideBar>
 
         <com.github.mzule.fantasyslide.SideBar

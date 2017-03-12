@@ -9,6 +9,8 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.graphics.drawable.DrawerArrowDrawable;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,6 +22,8 @@ import com.cooltechworks.creditcarddesign.CreditCardUtils;
 import com.github.mzule.fantasyslide.SideBar;
 import com.github.mzule.fantasyslide.SimpleFantasyListener;
 import com.github.mzule.fantasyslide.Transformer;
+import com.github.mzule.fantasyslide.calendar.BasicActivityDecorated;
+import com.github.mzule.fantasyslide.calendar.MaterialCalendarBasicActivity;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -116,16 +120,32 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main_menu, menu);
+        return true;
+    }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == android.R.id.home) {
-            if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
-                drawerLayout.closeDrawer(GravityCompat.START);
-            } else {
-                drawerLayout.openDrawer(GravityCompat.START);
-            }
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                } else {
+                    drawerLayout.openDrawer(GravityCompat.START);
+                }
+                break;
+            case R.id.settings:
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
         }
         return true;
+    }
+
+    void startActivity(Class<?> cls) {
+        startActivity(new Intent(this, cls));
     }
 
     public void onClick(View view) {
@@ -140,7 +160,7 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(new Intent(this, CreditCardActivity.class));
                         break;
                     case "查看":
-                        startActivity(new Intent(this, CreditCardViewActivity.class));
+                        startActivity(new Intent(this, com.github.mzule.fantasyslide.filepicker.MainActivity.class));
                         break;
                     case "表单":
                         startActivity(new Intent(this, CreditCardFormViewActivity.class));
@@ -148,6 +168,9 @@ public class MainActivity extends AppCompatActivity {
                     case "信用卡":
                         Intent intent = new Intent(MainActivity.this, CardEditActivity.class);
                         startActivityForResult(intent,GET_NEW_CARD);
+                        break;
+                    case "日历":
+                        startActivity(BasicActivityDecorated.class);
                         break;
                     default:
                         startActivity(UniversalActivity.newIntent(this, title));
