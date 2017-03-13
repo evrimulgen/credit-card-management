@@ -24,6 +24,7 @@ import com.github.mzule.fantasyslide.SimpleFantasyListener;
 import com.github.mzule.fantasyslide.Transformer;
 import com.github.mzule.fantasyslide.calendar.BasicActivityDecorated;
 import com.github.mzule.fantasyslide.calendar.MaterialCalendarBasicActivity;
+import com.github.mzule.fantasyslide.camera.CameraActivity;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -160,7 +161,7 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(new Intent(this, CreditCardActivity.class));
                         break;
                     case "查看":
-                        startActivity(new Intent(this, com.github.mzule.fantasyslide.filepicker.MainActivity.class));
+                        startActivity(CameraActivity.class);
                         break;
                     case "表单":
                         startActivity(new Intent(this, CreditCardFormViewActivity.class));

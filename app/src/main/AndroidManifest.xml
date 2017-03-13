@@ -2,6 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.github.mzule.fantasyslide.app">
 
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -31,6 +36,7 @@
         <activity android:name="com.github.mzule.fantasyslide.calendar.MaterialCalendarBasicActivity"></activity>
         <activity android:name="com.github.mzule.fantasyslide.calendar.BasicActivityDecorated"></activity>
         <activity android:name="com.github.mzule.fantasyslide.filepicker.MainActivity"></activity>
+        <activity android:name="com.github.mzule.fantasyslide.camera.CameraActivity"></activity>
     </application>
 
 </manifest>
