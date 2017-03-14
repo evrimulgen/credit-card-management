@@ -4,9 +4,8 @@ import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
 
-import com.github.mzule.fantasyslide.app.BaseActivity;
+import com.github.mzule.fantasyslide.base.BaseActivity;
 import com.github.mzule.fantasyslide.app.R;
 import com.github.mzule.fantasyslide.calendar.decorator.EventDecorator;
 import com.github.mzule.fantasyslide.calendar.decorator.HighlightWeekendsDecorator;

@@ -45,4 +45,5 @@
     <string name="msg_unsupported_op">Unsupported operation</string>
 
     <string name="pref_key_transition_time" translatable="false">pref_key_transition_time</string>
+    <string name="can_not_find_version_name">Cannot find version name</string>
 </resources>

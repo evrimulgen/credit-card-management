@@ -11,6 +11,7 @@ import com.alamkanak.weekview.DateTimeInterpreter;
 import com.alamkanak.weekview.MonthLoader;
 import com.alamkanak.weekview.WeekView;
 import com.alamkanak.weekview.WeekViewEvent;
+import com.github.mzule.fantasyslide.base.BaseActivity;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
