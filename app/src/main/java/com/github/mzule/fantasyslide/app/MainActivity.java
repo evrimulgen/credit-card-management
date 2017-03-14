@@ -25,6 +25,7 @@ import com.github.mzule.fantasyslide.Transformer;
 import com.github.mzule.fantasyslide.calendar.BasicActivityDecorated;
 import com.github.mzule.fantasyslide.calendar.MaterialCalendarBasicActivity;
 import com.github.mzule.fantasyslide.camera.CameraActivity;
+import com.github.mzule.fantasyslide.weather.WeatherActivity;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -171,7 +172,7 @@ public class MainActivity extends AppCompatActivity {
                         startActivityForResult(intent,GET_NEW_CARD);
                         break;
                     case "日历":
-                        startActivity(BasicActivityDecorated.class);
+                        startActivity(WeatherActivity.class);
                         break;
                     default:
                         startActivity(UniversalActivity.newIntent(this, title));
