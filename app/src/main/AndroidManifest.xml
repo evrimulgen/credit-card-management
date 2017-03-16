@@ -39,6 +39,7 @@
         <activity android:name="com.github.mzule.fantasyslide.filepicker.MainActivity"></activity>
         <activity android:name="com.github.mzule.fantasyslide.camera.CameraActivity"></activity>
         <activity android:name="com.github.mzule.fantasyslide.weather.WeatherActivity"></activity>
+        <activity android:name="com.github.mzule.fantasyslide.workout.WorkoutListActivity"></activity>
     </application>
 
 </manifest>

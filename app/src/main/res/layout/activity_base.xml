@@ -33,5 +33,5 @@
         android:id="@+id/content_frame"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_behavior="com.michaelcarrano.seven_min_workout.widget.PaddingFixScrollingViewBehavior" />
+        app:layout_behavior="com.github.mzule.fantasyslide.workout.PaddingFixScrollingViewBehavior" />
 </android.support.design.widget.CoordinatorLayout>

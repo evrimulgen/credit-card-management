@@ -46,4 +46,5 @@
 
     <string name="pref_key_transition_time" translatable="false">pref_key_transition_time</string>
     <string name="can_not_find_version_name">Cannot find version name</string>
+    <string name="menu_start_workout">Start Workout</string>
 </resources>

@@ -26,6 +26,7 @@ import com.github.mzule.fantasyslide.calendar.BasicActivityDecorated;
 import com.github.mzule.fantasyslide.calendar.MaterialCalendarBasicActivity;
 import com.github.mzule.fantasyslide.camera.CameraActivity;
 import com.github.mzule.fantasyslide.weather.WeatherActivity;
+import com.github.mzule.fantasyslide.workout.WorkoutListActivity;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -162,7 +163,7 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(new Intent(this, CreditCardActivity.class));
                         break;
                     case "查看":
-                        startActivity(CameraActivity.class);
+                        startActivity(CalendarActivity.class);
                         break;
                     case "表单":
                         startActivity(new Intent(this, CreditCardFormViewActivity.class));
